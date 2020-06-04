@@ -4,19 +4,37 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faExclamation,
   faCheckCircle,
-
 } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = (props) => {
-  const { signIn, SignOut } = props;
+  const { signIn, signOut, user } = props;
+
+  const signInOutJsx = user ? (
+    <button onClick={signOut}>Log Out</button>
+  ) : (
+    <button onClick={signIn}>Log in</button>
+  );
+
   return (
     <>
       <h1>Contact Council</h1>
       <div className={styles.authentication}>
-        <p>Sign In</p>
-        <p>Sign Out</p>
+        {/* <p
+          onClick={() => {
+            signIn();
+          }}
+        >
+          Sign In
+        </p>
+        <p
+          onClick={() => {
+            signOut();
+          }}
+        >
+          Sign Out
+        </p> */}
 
-
+        <p>{signInOutJsx}</p>
       </div>
       <FontAwesomeIcon icon={faExclamation} />
       <FontAwesomeIcon icon={faCheckCircle} />
