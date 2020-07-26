@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./NavBar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,24 +17,14 @@ const NavBar = (props) => {
 
   return (
     <>
-      <h1>Contact Council</h1>
-      <div className={styles.authentication}>
-        {/* <p
-          onClick={() => {
-            signIn();
-          }}
-        >
-          Sign In
-        </p>
-        <p
-          onClick={() => {
-            signOut();
-          }}
-        >
-          Sign Out
-        </p> */}
+      <h1>Contact Council </h1>
+      <p>{signInOutJsx}</p>
 
-        <p>{signInOutJsx}</p>
+      <div>
+        <p>New</p>
+        <p>Previous Points</p>
+        <p>Messages</p>
+        <p>Another</p>
       </div>
       <FontAwesomeIcon icon={faExclamation} />
       <FontAwesomeIcon icon={faCheckCircle} />
