@@ -15,7 +15,7 @@
     "firebase": "^7.14.5",
     "fontawesome": "^5.6.3",
     "google-maps-react": "^2.0.6",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hook-google-maps": "^0.0.3",
